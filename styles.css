@@ -1,0 +1,157 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-blue-hover: hsl(245, 83%, 68%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+ *, *::before, *::after {
+        box-sizing: inherit;
+    }
+
+h1, h2, h3, p {
+        margin: 0;
+    }
+body {
+    background-color: var(--pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(images/pattern-background-mobile.svg);
+}
+
+.container {
+    background-color: white;
+    border-radius: 25px;
+    width: 20.3125rem;
+    margin: auto;
+position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero {
+border-radius: 25px 25px 0 0;
+max-width:100%;
+max-height:100%;
+}
+
+.main {
+    padding: 25px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 1.25em;
+    padding-top: 2.375em;
+    text-align: center;
+}
+
+h2 {
+    font-size: .75em;
+    font-weight: 900;
+}
+
+h1, h2 {
+    color: var(--dark-blue);
+}
+
+
+p.desc {
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--desaturated-blue);
+    padding: 1.875em 2.5em;
+    text-align: center;
+}
+
+.plan {
+    background-color: var(--very-pale-blue);
+    margin: 0 1.5em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1em;
+}
+
+.annual-plan {
+    line-height: 1.5;
+    padding: 0 3.125em 0 1.25em;
+}
+
+.price {
+    font-size: .75em;
+    color: var(--desaturated-blue)
+}
+
+.change {
+    font-size: .8125em;
+    color: var(--bright-blue)
+}
+
+.change:hover {
+    color: var(--bright-blue-hover);
+}
+
+
+.proceed {
+    background-color: var(--bright-blue);
+    color: white;
+    border-radius: 10px;
+    margin: 25px;
+}
+
+.proceed:hover{
+    background-color: var(--bright-blue-hover);
+    cursor: pointer;
+}
+
+.proceed, .cancel {
+    display: block; 
+    padding: 20px 65px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: .1em;
+}
+
+.cancel {
+    color: var(--desaturated-blue);
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+
+.cancel:hover {
+    color: var(--dark-blue);
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+background-image: url(images/pattern-background-desktop.svg);
+    }
+    
+    .container {
+        width: 28.125em;
+    }
+
+    p.desc {
+        padding: 1.875em 5em;
+    }
+
+    .plan {
+        margin: 0 3.125em 1.875em 3.125em;
+    }
+
+    .annual-plan {
+    padding: 0 6.333em 0 1.25em;
+}
+
+}
